@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tinyxiong.flowabledemo.demo.mapper.TestUserMapper">
+    <!--cache-->
+
+    <!--cache-ref-->
+
+    <!--resultMap-->
+
+    <!--sql-->
+
+    <!--insert-->
+    <insert id="insertTestUser" parameterType="testUser">
+        insert into test_user(id, name, password) values(#{id}, #{name}, #{password})
+    </insert>
+
+    <!--update-->
+
+    <!--delete-->
+
+    <!--select-->
+    <select id="selectTestUser" resultType="testUser">
+        select * from test_user
+    </select>
+
+    <select id="selectOne" parameterType="int" resultType="testUser">
+        select * from test_user where id=#{id}
+    </select>
+</mapper>
